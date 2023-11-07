@@ -20,10 +20,8 @@
 - Rails: 7.0.8
 
 ### ▶ フロントエンド
-- HTML
-- CSS
 - React: 18.2.0
-- TypeScript: 
+- TypeScript: 5.2.2
 - react-rails: 3.1.1
 
 ### ▶ DB

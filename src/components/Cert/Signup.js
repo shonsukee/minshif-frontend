@@ -9,15 +9,18 @@ const Signup = () => {
   const signUp = async () => {
     const auth = getAuth();
 
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      alert(`Create account: ${user.email}`);
-    } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(`Error: ${errorCode} - ${errorMessage}`);
-    }
+    // try {
+    //   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    //   const user = userCredential.user;
+    //   alert(`Create account: ${user.email}`);
+    // } catch (error) {
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
+    //   alert(`Error: ${errorCode} - ${errorMessage}`);
+    // }
+
+
+    //backendに送るコードを追記！
   };
 
   return (

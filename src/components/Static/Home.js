@@ -5,7 +5,8 @@ export default function Home() {
 	return (
 		<div>
 			<Header />
-			<h1>シフト変更もラクラク、みんしふがお手伝い。</h1>
+			<h1><b>みんしふ</b>へようこそ！</h1>
+			<h2>シフトの変更もラクラク管理。</h2>
 		</div>
 	);
 }

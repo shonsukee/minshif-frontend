@@ -7,6 +7,7 @@ const Header = () => {
         <ul>
           <li><a href="/login">ログイン</a></li>
           <li><a href="/sign_up">無料アカウント作成</a></li>
+          <li><a href="/schedule">個人カレンダーを利用</a></li>
         </ul>
       </nav>
     </header>

@@ -8,7 +8,6 @@ export default function Indivisual() {
 
   const handleDateSubmit = (e) => {
     e.preventDefault();
-    // 日付の提出ロジックをここで処理
   };
 
   const handleDateChange = (e) => {
@@ -26,7 +25,7 @@ export default function Indivisual() {
       },
     ]);
 
-    setInputText("");
+    //setInputText("");
   };
 
   const handleTextChange = (e, id) => {

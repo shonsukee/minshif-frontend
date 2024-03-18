@@ -27,7 +27,7 @@ export default function Join() {
           </div>
           <div class="flex items-center justify-center">
             <div class="p-5 m-5">
-              <a href="/create">グループに参加</a>
+              <a href="/group/create">グループに参加</a>
             </div>
           </div>
           <div class="basis-8/12 hidden xl:inline-block">

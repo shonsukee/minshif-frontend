@@ -1,37 +1,26 @@
-import React from "react";
 import "../../output.css";
 import Headers from "../Partials/_home_header";
 import SubmitButton from '../Partials/_submit_button'
+import GroupTextBox from '../Partials/_group_text_box'
 
-export default function GroupJoin() {
+export default function GroupCreate() {
 	return (
 		<>
 			<Headers />
-			<div class="mx-auto max-w-container px-4 lg:px-6 lg:px-8 h-5/6">
-				<div class="xl:flex xl:flex-wrap xl:flex-row p-5 m-5">
-					<div class="flex items-center justify-center whitespace-nowrap basis-4/12">
-						<h1 class="text-4xl font-bold pb-2">グループに参加</h1>
+			<div className="text-center w-fit mx-auto">
+				<div>
+					<h1 class="text-4xl font-bold m-10">グループに参加</h1>
+					<GroupTextBox name={'グループIDを入力'} />
+					<div className="flex justify-end my-10">
+						<SubmitButton name={'参加'} />
 					</div>
-					<div class="flex flex-col items-center justify-center">
-						<input
-							type="text"
-							id="joinGroupId"
-							name="joinGroupName"
-							placeholder="グループIDを入力"
-						/>
-					</div>
-					<div class="flex items-center justify-center">
-						<div class="ml-10">
-							<SubmitButton name={'参加'} />
-						</div>
-					</div>
-					<div class="flex items-center justify-center">
-						<div class="p-5 m-5">
-							<a href="/group/create">グループを新規作成</a>
-						</div>
-					</div>
+				</div>
+				<div>
+					<a href="/group/create">
+						<span className="text-blue-800">グループを新規作成</span>
+					</a>
 				</div>
 			</div>
 		</>
 	);
-}
+};

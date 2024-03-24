@@ -1,12 +1,12 @@
 import React from "react";
 import '../../output.css';
-import Headers from "../Partials/_static_header";
+import Header from "../Partials/_header";
 import Button from "../Partials/_arrow_button";
 
 export default function Home() {
 	return (
 		<>
-			<Headers />
+			<Header />
 			<div>
 				<div className="h-70-screen grid grid-cols-12 p-max">
 					<div className="col-span-12 justify-self-center align-self-center xl:col-span-5">

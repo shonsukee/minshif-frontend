@@ -1,28 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../output.css";
-import Headers from "../Partials/_home_header";
 
-export default function Calender() {
+const NavigationCalender = (props) => {
+	const { year, month } = props;
 	const calenderTable = [];
 	var isThisMonth = false;
 
 	// 今月の日数を取得
-	const now = new Date();
-	var year = now.getFullYear();
-	const month = 9;
-	const thisMonthDays = new Date(year, month + 1, 0).getDate();
+	const thisMonthDays = new Date(year, Number(month) + 1, 0).getDate();
 
 	// 今月の1日の曜日を取得
 	const dayOfWeek = new Date(year, month, 1).getDay();
 
-	// 先月の日数を取得
+	//来月の年、月を取得
+	let nextMonth = Number(month) + 1;
+	let nextMonthYear = year;
+	if (nextMonth === 12) {
+		nextMonthYear++;
+		nextMonth = 0;
+	}
+
+	// 先月の年、月、日数を取得
 	if (dayOfWeek === 0) isThisMonth = true;
-	var lastMonth = month - 1;
+	let lastMonth = month - 1;
+	let lastMonthYear = year;
 	if (lastMonth === -1) {
-		year--;
+		lastMonthYear--;
 		lastMonth = 11;
 	}
-	const lastMonthDays = new Date(year, lastMonth + 1, 0).getDate();
+	const lastMonthDays = new Date(lastMonthYear, lastMonth + 1, 0).getDate();
 
 	// 表示する最初の日を設定
 	var nextday;
@@ -44,13 +51,22 @@ export default function Calender() {
 			}
 		}
 		calenderTable.push(week);
-	} while (isThisMonth);
+	} while (calenderTable.length < 6);
 
 	return (
 		<>
-			<Headers />
 			<div class="mx-auto max-w-container px-4 lg:px-6 lg:px-8 h-5/6">
 				<div class="xl:flex xl:flex-wrap xl:flex-row p-5 m-5">
+					<Link to={`/navigation_calender/${lastMonthYear}/${lastMonth}`}
+						style={{ fontSize: '50px', fontFamily: 'Arial, sans-serif', color: '#333' }}>
+						<span className="sr-only">&lt;</span>
+						&lt;
+					</Link>
+					<Link to={`/navigation_calender/${nextMonthYear}/${nextMonth}`}
+						style={{ fontSize: '50px', fontFamily: 'Arial, sans-serif', color: '#333' }}>
+						<span className="sr-only">&gt;</span>
+						&gt;
+					</Link>
 					<div class="flex items-center justify-center whitespace-nowrap basis-4/12">
 						<div class="flex justify-center mt-4">
 							<table>
@@ -67,17 +83,22 @@ export default function Calender() {
 								</thead>
 								<tbody>
 									{calenderTable.map((week, index) => (
-										<tr key={index}>
+										<tr key={index} style={{ justifyContent: 'center', padding: '10px' }}>
 											{week.map((day, index) => (
-												<td key={index}>{day}</td>
-											))}</tr>
+												<td key={index} style={{ width: '40px', textAlign: 'center' }}>
+													{day}
+												</td>
+											))}
+										</tr>
 									))}
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div >
 		</>
 	);
 }
+
+export default NavigationCalender;

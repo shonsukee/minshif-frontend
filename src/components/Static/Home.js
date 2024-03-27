@@ -17,7 +17,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="col-span-7 align-self-center basis-8/12 hidden xl:inline-block">
-						<img src="/img/time_shift.png" alt="minshif time image" />
+						<img src="/img/time_shift.png" alt="minshif-time-axis" />
 					</div>
 				</div>
 			</div>

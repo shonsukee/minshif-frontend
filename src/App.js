@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Static/Home";
-import Calender from "./components/Calender/Calender";
+import NavigationCalender from "./components/Calender/NavigationCalender";
 import Login from "./components/GoogleResource/GoogleLogin";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/login" element={<Login />} />
-				<Route path="/calender" element={<Calender />} />
+				<Route path="/navigation_calender" element={<NavigationCalender />} />
 			</Routes>
 		</Router>
 	);

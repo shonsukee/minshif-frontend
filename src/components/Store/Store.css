@@ -1,7 +1,7 @@
 /**
- * /group/create
+ * 店舗作成ページ
  */
-.input-group {
+ut-group {
 	height: 28px;
 	margin: 1px 1px 0 1px;
 	padding: 13px 15px;
@@ -10,7 +10,6 @@
 }
 
 
-/* inputタグ */
 .text_box {
 	display: flex;
 	align-items: center;

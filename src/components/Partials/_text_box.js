@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Store/Store.css";
 
-export default function GroupCreate(props) {
+export default function TextBox(props) {
 	const [isFocused, setIsFocused] = useState(false);
 	const borderColor = isFocused ? '#0b57d0' : '#1f1f1f';
 

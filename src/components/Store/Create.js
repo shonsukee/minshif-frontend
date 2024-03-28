@@ -3,7 +3,7 @@ import Headers from "../Partials/_home_header";
 import SubmitButton from '../Partials/_submit_button'
 import TextBox from '../Partials/_text_box'
 
-export default function GroupCreate() {
+export default function StoreCreate() {
 	return (
 		<>
 			<Headers />
@@ -16,7 +16,7 @@ export default function GroupCreate() {
 					</div>
 				</div>
 				<div>
-					<a href="/group/join">
+					<a href="/store/join">
 						<span className="text-blue-800">グループに参加</span>
 					</a>
 				</div>

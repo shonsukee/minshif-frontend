@@ -3,7 +3,7 @@ import Headers from "../Partials/_home_header";
 import SubmitButton from '../Partials/_submit_button'
 import TextBox from '../Partials/_text_box'
 
-export default function GroupJoin() {
+export default function StoreJoin() {
 	return (
 		<>
 			<Headers />
@@ -16,7 +16,7 @@ export default function GroupJoin() {
 					</div>
 				</div>
 				<div>
-					<a href="/group/create">
+					<a href="/store/create">
 						<span className="text-blue-800">グループを新規作成</span>
 					</a>
 				</div>
